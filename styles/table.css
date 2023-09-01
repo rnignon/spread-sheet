@@ -1,0 +1,42 @@
+.main__table {
+    width: 100%;
+    margin-top: 1em;
+    border: lightskyblue 1px solid;
+}
+
+.main__table,
+.main__table th,
+.main__table td {
+    /*background: transparent;*/
+    border-collapse: collapse;
+    border: rgb(var(--line)) 1px solid;
+    text-align: center;
+    height: 3em;
+}
+
+.main__table thead {
+    background: rgb(var(--cell));
+}
+
+.main__table th, tr {
+    width: 10%;
+}
+
+.main__table th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main__table td {
+    word-break: break-all;
+    padding: 0.3em;
+}
+
+.main__table tbody tr td:first-child {
+    background: rgb(var(--cell));
+}
+
+.cell-hover {
+    background: rgb(var(--highlight));
+    transition: 500ms;
+}

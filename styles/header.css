@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+}
+
+.header__title {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.header__button {
+    font-size: 1.2em;
+    margin: 3% 0 3% auto;
+    padding: 0.2em 0.5em;
+    background: rgb(var(--button) / 70%);
+    border-style: none;
+    border-radius: 5px;
+}
+
+.header__button:hover {
+    cursor: pointer;
+    background: rgb(var(--button));
+    transition: 500ms;
+}
