@@ -32,11 +32,11 @@
     padding: 0.3em;
 }
 
+.main__table td:focus {
+    background: rgb(var(--cell) / 20%);
+}
+
 .main__table tbody tr td:first-child {
     background: rgb(var(--cell));
 }
 
-.cell-hover {
-    background: rgb(var(--highlight));
-    transition: 500ms;
-}
