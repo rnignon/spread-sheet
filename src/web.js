@@ -4,6 +4,7 @@ loadWeb();
 function loadWeb() {
     const table = new Table();
     loadTable(table);
+    loadExport(table);
 }
 
 function loadTable(table) {
@@ -64,6 +65,15 @@ function unHightlightCell(row, col) {
     col.style.backgroundColor = 'rgb(var(--cell))';
 }
 
-function exportTable() {
+function loadExport(table) {
+    let exportButton = document.querySelector('.header__button');
+    exportButton.addEventListener('click', () => exportTable(table));
+}
 
+function exportTable(table) {
+    const book = XLSX.utils.book_new();
+    const sheet = XLSX.utils.aoa_to_sheet(table.list);
+
+    XLSX.utils.book_append_sheet(book, sheet, 'Sheet1');
+    XLSX.writeFile(book, 'spreadsheet.xlsx');
 }
